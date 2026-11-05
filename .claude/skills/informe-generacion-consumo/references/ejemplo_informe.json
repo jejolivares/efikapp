@@ -1,0 +1,45 @@
+{
+ "nombre": "Bandeja del Postre (Santiago)",
+ "kwp": 34.80,
+ "tarifa": null,
+ "hasta": "2026-10",
+ "plataforma": "Huawei FusionSolar",
+ "archivo": "Informe_Gen_vs_Consumo_Bandeja_del_Postre.pdf",
+ "etiqueta_consumo": "Consumo del negocio",
+ "incompletos": {"2025-12": "Puesta en marcha, mes parcial"},
+ "datos_cliente": [
+  ["Cliente", "Bandeja del Postre (Santiago)"],
+  ["NIC", "6077632"],
+  ["Distribuidora", "Edenorte · Tarifa comercial"],
+  ["Potencia instalada", "34.80 kWp (FusionSolar registra 34.83 kWp)"],
+  ["Plataforma de monitoreo", "Huawei FusionSolar, con smart meter (mide el consumo total)"],
+  ["Puesta en marcha", "Diciembre 2025"]
+ ],
+ "resumen": [
+  "El sistema fotovoltaico de 34.80 kWp funciona correctamente y cumple lo prometido. De enero a octubre 2026 generó 45,042 kWh, un 99.6% de la generación esperada para esos meses (45,221 kWh). Desde marzo, con el sistema ya estabilizado, la generación va un 4.6% por encima de lo esperado.",
+  "En el mismo período el negocio consumió 37,092 kWh, por lo que el sistema produjo el 121.4% de la energía consumida: un excedente neto de 7,950 kWh. Con medición neta, solo enero tuvo energía a facturar (633 kWh); de febrero a octubre el consumo neto fue cero y se acumuló un crédito de unos 8,583 kWh."
+ ],
+ "indicadores_lectura": {},
+ "texto_grafico": [
+  "Desde febrero el sistema genera más de lo que consume el negocio. La generación sigue de cerca la curva esperada y la supera de mayo a septiembre. Diciembre 2025 (gris) es el mes de puesta en marcha y se excluye de las comparaciones."
+ ],
+ "texto_origen": [
+  "Durante el día el negocio usa directamente cerca de la mitad de lo que generan los paneles; el resto (23,001 kWh) se inyecta a la red y queda como crédito. En la noche y en horas de poco sol el negocio toma energía de la red (15,051 kWh en el período), que se compensa con ese crédito."
+ ],
+ "texto_meses_bajos": null,
+ "observaciones": [
+  "Diciembre 2025 es el mes de puesta en marcha (624 kWh registrados) y no representa un mes completo.",
+  "Enero 2026 generó 67.2% de lo esperado y febrero 85.5%. Puede deberse a ajustes posteriores a la puesta en marcha o a días nublados; conviene revisar las alarmas de esas semanas en FusionSolar. Desde marzo la generación está en línea o por encima de lo esperado.",
+  "El consumo del negocio subió de 2,952 kWh en febrero a 4,270 kWh en septiembre, propio de los meses de más calor (refrigeración y aire acondicionado)."
+ ],
+ "conclusiones": [
+  "El sistema cumple la generación prometida: 99.6% de lo esperado de enero a octubre y 104.6% desde marzo.",
+  "Cubre el 121.4% del consumo del negocio; desde febrero el consumo neto facturable de energía es cero.",
+  "No se observan fallas ni pérdida de rendimiento."
+ ],
+ "recomendaciones": [
+  "Programar limpieza de paneles al menos dos veces al año para mantener el rendimiento.",
+  "Revisar con el cliente las facturas de Edenorte de 2026 para confirmar que los créditos de medición neta se están aplicando correctamente.",
+  "Confirmar la tarifa comercial del contrato para incluir en el próximo informe el ahorro estimado en pesos."
+ ]
+}
