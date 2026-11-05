@@ -299,6 +299,29 @@ class Deye:
 
 
 # ========================================================= base de clientes
+PREFIJOS_NOMBRE = ("res", "flia", "familia")
+
+
+def sin_prefijos(k):
+    """Quita prefijos tipo 'Res.', 'Flia.' de una clave para comparar nombres entre plataformas."""
+    cambio = True
+    while cambio:
+        cambio = False
+        for x in PREFIJOS_NOMBRE:
+            if k.startswith(x) and len(k) > len(x) + 3:
+                k, cambio = k[len(x):], True
+    return k
+
+
+def buscar_cliente(clientes, nombre):
+    k = clave(nombre)
+    if k in clientes:
+        return clientes[k]
+    ks = sin_prefijos(k)
+    hits = [v for c, v in clientes.items() if sin_prefijos(c) == ks]
+    return hits[0] if len(hits) == 1 else {}
+
+
 def leer_clientes(ruta):
     """CSV exportado de 'Clientes FV Nuevo' (+ columnas opcionales Tarifa y Enviar)."""
     base = {}
@@ -693,7 +716,7 @@ def main():
     os.makedirs(salida, exist_ok=True)
     resumen = []
     for p, datos in plantas:
-        info = clientes.get(clave(p["nombre"]), {})
+        info = buscar_cliente(clientes, p["nombre"])
         if info and not info["enviar"]:
             continue
         meta = {**p, "kwp": info.get("kwp") or p.get("kwp_api"), "nic": info.get("nic", "")}
